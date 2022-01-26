@@ -1,8 +1,7 @@
 const express = require('express');
+const servicosController = require('../controllers/servicosController');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.render('servicos');
-});
+router.get('/', servicosController.buscarServicos);
 
 module.exports = router;
