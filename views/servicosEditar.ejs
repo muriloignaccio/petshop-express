@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head'); %>
+
+  <body>
+
+    <%- include('./partials/header'); %>
+      <main class="admin">
+        <div class="container">
+          <h1>Painel Administrativo</h1>
+          <a href=""> voltar para lista de serviços</a>
+          <% if(typeof servico !=='undefined' ) { %>
+            <form action="" method="POST">
+              <fieldset>
+                <legend>Editar Serviço</legend>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" value="<%= servico.nome %>" required>
+
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao"><%= servico.descricao %></textarea>
+
+                <label for="preco">Preço</label>
+                <input type="number" name="preco" id="preco" value="<%= servico.preco %>">
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </fieldset>
+            </form>
+            <% } %>
+        </div>
+      </main>
+      <%- include('./partials/footer'); %>
+
+  </body>
+
+</html>
