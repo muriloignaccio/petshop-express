@@ -10,7 +10,7 @@
           <h1>Painel Administrativo</h1>
           <a href=""> voltar para lista de serviços</a>
           <% if(typeof servico !=='undefined' ) { %>
-            <form action="" method="POST">
+            <form action="/admin/servicos/<%= servico.id %>/editar?_method=PUT" method="POST">
               <fieldset>
                 <legend>Editar Serviço</legend>
                 <label for="nome">Nome</label>

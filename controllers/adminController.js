@@ -28,6 +28,28 @@ const adminController = {
     fs.writeFileSync(__dirname + '/../models/servicos.json', JSON.stringify(servicosModel));
 
     res.redirect('/admin/servicos');
+  },
+  editarServicos: function(req, res) {
+    const { id } = req.params;
+
+    const servico = servicosModel.find(servico => servico.id === id);
+
+    res.render('servicosEditar', { servico });
+  },
+  update: function(req, res) {
+    const { id } = req.params;
+
+    const { nome, preco, descricao } = req.body;
+
+    const servico = servicosModel.find(servico => servico.id === id);
+
+    servico.nome = nome;
+    servico.preco = preco;
+    servico.descricao = descricao;
+
+    fs.writeFileSync(__dirname + '/../models/servicos.json', JSON.stringify(servicosModel));
+
+    res.redirect('/admin/servicos');
   }
 };
 
