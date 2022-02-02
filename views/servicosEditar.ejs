@@ -13,6 +13,9 @@
             <form action="/admin/servicos/<%= servico.id %>/editar?_method=PUT" method="POST">
               <fieldset>
                 <legend>Editar Serviço</legend>
+
+                <img src="/uploads/<%= servico.fotoURL %>" alt="">
+
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" value="<%= servico.nome %>" required>
 

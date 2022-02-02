@@ -11,7 +11,7 @@
 					<h1>Painel Administrativo</h1>
 					<a href=""> voltar para lista de serviços</a>
 
-					<form action="/admin/servicos/cadastrar" method="POST">
+					<form action="/admin/servicos/cadastrar" enctype="multipart/form-data" method="POST">
 						<fieldset>
 							<legend>Novo Serviço</legend>
 							<label for="nome">Nome</label>
@@ -22,6 +22,9 @@
 
 							<label for="preco">Preço</label>
 							<input type="number" name="preco" id="preco">
+
+							<label for="ilustracao">Ilustração</label>
+							<input type="file" name="ilustracao" id="ilustracao">
 
 							<button type="submit" class="btn btn-primary">Enviar</button>
 						</fieldset>

@@ -20,7 +20,7 @@ const adminController = {
       nome,
       preco,
       descricao,
-      fotoURL: ''
+      fotoURL: req.file.filename
     }
 
     servicosModel.push(servico);
