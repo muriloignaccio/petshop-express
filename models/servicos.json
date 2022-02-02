@@ -39,6 +39,13 @@
     "nome": "teste",
     "preco": "78",
     "descricao": "teste123",
-    "fotoURL": "ilustracao1643675536192.jpeg"
+    "fotoURL": "ilustracao1643840197273.png"
+  },
+  {
+    "id": "b32cab1e-62ed-4fab-873d-eebbb4d21513",
+    "nome": "teste7",
+    "preco": "70",
+    "descricao": "teste",
+    "fotoURL": "ilustracao1643841396235.png"
   }
 ]

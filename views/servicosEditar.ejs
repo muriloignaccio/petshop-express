@@ -14,8 +14,6 @@
               <fieldset>
                 <legend>Editar Serviço</legend>
 
-                <img src="/uploads/<%= servico.fotoURL %>" alt="">
-
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" value="<%= servico.nome %>" required>
 
@@ -24,6 +22,11 @@
 
                 <label for="preco">Preço</label>
                 <input type="number" name="preco" id="preco" value="<%= servico.preco %>">
+
+                <img src="/uploads/<%= servico.fotoURL %>" alt="">
+
+                <label for="ilustracao">Ilustração</label>
+							  <input type="file" name="ilustracao" id="ilustracao">
 
                 <button type="submit" class="btn btn-primary">Enviar</button>
               </fieldset>
