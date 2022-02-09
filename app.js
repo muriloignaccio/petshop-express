@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
+const logDH = require('./middlewares/logDH');
 
 const indexRouter = require('./routes/index');
 const petsRouter = require('./routes/pets');
@@ -26,6 +27,7 @@ app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+app.use(logDH);
 
 app.use(indexRouter);
 app.use('/pets', petsRouter);

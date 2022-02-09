@@ -19,33 +19,5 @@
     "preco": 20,
     "descricao": "Corte de pelos",
     "fotoURL": "/images/tosa.svg"
-  },
-  {
-    "id": "ec94b04b-c7fd-4ac9-87df-a19aca2d352b",
-    "nome": "Tosa e Banho",
-    "preco": "50",
-    "descricao": "dasdsadsa",
-    "fotoURL": ""
-  },
-  {
-    "id": "6b6d8425-2137-4d0c-a9d7-02fab7474272",
-    "nome": "Passear com Pet",
-    "preco": "40",
-    "descricao": "Levamos seu Pet para passear",
-    "fotoURL": ""
-  },
-  {
-    "id": "0b224604-6038-4220-a80d-822f045ffd6a",
-    "nome": "teste",
-    "preco": "78",
-    "descricao": "teste123",
-    "fotoURL": "ilustracao1643840197273.png"
-  },
-  {
-    "id": "b32cab1e-62ed-4fab-873d-eebbb4d21513",
-    "nome": "teste7",
-    "preco": "70",
-    "descricao": "teste",
-    "fotoURL": "ilustracao1643841396235.png"
   }
 ]

@@ -1,6 +1,8 @@
 const servicosModel = require('../models/servicos.json');
 const uuidv4 = require('uuidv4');
 const fs = require('fs');
+const { validationResult } = require('express-validator');
+const { array } = require('../middlewares/multer');
 
 const adminController = {
   index: function(req, res) {
@@ -13,6 +15,12 @@ const adminController = {
     res.render('servicosCadastro')
   },
   store: function(req, res) {
+    const erros = validationResult(req);
+
+    if (!erros.isEmpty()) {
+      res.render('servicosCadastro', { erros: erros.array().map(erro => erro.msg) });
+    }
+
     const { nome, preco, descricao } = req.body;
 
     const servico = {
@@ -46,6 +54,10 @@ const adminController = {
     servico.nome = nome;
     servico.preco = preco;
     servico.descricao = descricao;
+
+    if (req.file) {
+      servico.fotoURL = req.file.filename;
+    }
 
     fs.writeFileSync(__dirname + '/../models/servicos.json', JSON.stringify(servicosModel));
 

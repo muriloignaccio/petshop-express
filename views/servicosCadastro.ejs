@@ -12,6 +12,11 @@
 					<a href=""> voltar para lista de serviços</a>
 
 					<form action="/admin/servicos/cadastrar" enctype="multipart/form-data" method="POST">
+						<% if (typeof erros !== 'undefined') { %>
+							<% erros.forEach(erro => { %>
+								<p><%= erro %></p>
+							<% }) %>
+						<% } %>
 						<fieldset>
 							<legend>Novo Serviço</legend>
 							<label for="nome">Nome</label>
