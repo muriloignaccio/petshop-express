@@ -6,7 +6,24 @@
 <body>
     <%- include('./partials/header') %>
     <main>
-        <!-- aqui vem o cadastro -->
+        <div class="container">
+            <img src="/img/ilustra-chill.png" alt="Ilustração de pessoa relaxada no sofá com um gato">
+    
+            <div class="box-white">
+                <h1>Login</h1>
+    
+                <form action="/login" method="POST">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+    
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha">
+    
+                    <button type="submit">entrar</button>
+                </form>
+                <a href="/cadastro">ainda não sou cadastrado</a>
+            </div>
+        </div>
     </main>
     <%- include('./partials/footer') %>
 </body>
