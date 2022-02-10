@@ -17,6 +17,12 @@ const cadastroController = {
     if (senha !== confirmaSenha) {
       return res.render('cadastro', { erro: 'Senhas não coincidem' });
     };
+    
+    const emailJaExiste = usuariosModel.some(usuario => usuario.email === email);
+
+    if (emailJaExiste) {
+      return res.render('cadastro', { erro: 'Email já utilizado. Tente outro' });
+    }
 
     const usuario = {
       id: uuidv4.uuid(),
