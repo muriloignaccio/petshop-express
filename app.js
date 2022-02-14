@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
 const logDH = require('./middlewares/logDH');
+const session = require('express-session');
 
 const indexRouter = require('./routes/index');
 const petsRouter = require('./routes/pets');
@@ -29,6 +30,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 app.use(logDH);
+app.use(session({ secret: "Não usem discord com unha acrigel" }));
 
 app.use(indexRouter);
 app.use('/pets', petsRouter);
