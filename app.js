@@ -16,6 +16,8 @@ const contatoRouter = require('./routes/contato');
 const adminRouter = require('./routes/admin');
 const cadastroRouter = require('./routes/cadastro');
 
+const autenticador = require('./middlewares/autenticacao');
+
 const app = express();
 
 // view engine setup
@@ -38,7 +40,7 @@ app.use('/servicos', servicosRouter);
 app.use('/sobre', sobreRouter);
 app.use('/login', loginRouter);
 app.use('/contato', contatoRouter);
-app.use('/admin', adminRouter);
+app.use('/admin', validador, adminRouter);
 app.use('/cadastro', cadastroRouter);
 
 // catch 404 and forward to error handler
