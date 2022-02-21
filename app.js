@@ -40,7 +40,7 @@ app.use('/servicos', servicosRouter);
 app.use('/sobre', sobreRouter);
 app.use('/login', loginRouter);
 app.use('/contato', contatoRouter);
-app.use('/admin', validador, adminRouter);
+app.use('/admin', autenticador, adminRouter);
 app.use('/cadastro', cadastroRouter);
 
 // catch 404 and forward to error handler
